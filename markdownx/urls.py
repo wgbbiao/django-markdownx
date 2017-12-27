@@ -4,7 +4,7 @@
 See URLs in :doc:`../../example` to learn more.
 """
 
-from django.conf.urls import url
+from django.conf.urls import re_path
 
 from .views import (
     ImageUploadView,
@@ -13,6 +13,6 @@ from .views import (
 
 
 urlpatterns = [
-    url(r'^upload/$', ImageUploadView.as_view(), name='markdownx_upload'),
-    url(r'^markdownify/$', MarkdownifyView.as_view(), name='markdownx_markdownify'),
+    re_path(r'^upload/$', ImageUploadView.as_view(), name='markdownx_upload'),
+    re_path(r'^markdownify/$', MarkdownifyView.as_view(), name='markdownx_markdownify'),
 ]
