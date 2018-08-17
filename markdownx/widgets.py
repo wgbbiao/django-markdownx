@@ -93,11 +93,8 @@ class MarkdownxWidget(forms.Textarea):
         })
 
         return attrs
-
-    class Media:
-        js = {
-            'markdownx/js/markdownx{}.js'.format(minified),
-        }
+    media = Media(js=['markdownx/js/markdownx{}.js'.format(minified)],
+                  css={'all': ['markdownx/admin/css/markdownx{}.css'.format(minified)]})
 
 
 class AdminMarkdownxWidget(MarkdownxWidget, widgets.AdminTextareaWidget):
@@ -105,11 +102,5 @@ class AdminMarkdownxWidget(MarkdownxWidget, widgets.AdminTextareaWidget):
     MarkdownX TextArea widget for admin. Markdown enabled version of
     Django "TextArea" widget.
     """
-    class Media:
-        css = {
-            'all': {'markdownx/admin/css/markdownx{}.css'.format(minified), }
-        }
-
-        js = {
-            'markdownx/js/markdownx{}.js'.format(minified),
-        }
+    media = Media(js=['markdownx/js/markdownx{}.js'.format(minified)],
+                  css={'all': ['markdownx/admin/css/markdownx{}.css'.format(minified)]})

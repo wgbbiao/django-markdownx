@@ -68,6 +68,7 @@ __maintainer__ = 'Adi, Pouria Hadjibagheri'
 __url__ = 'https://github.com/neutronX/django-markdownx'
 __version__ = '2.0.21'
 __description__ = 'A comprehensive Markdown editor built for Django.'
+default_app_config = "markdownx.apps.MarkdownxConfig"
 # ~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
 
 
